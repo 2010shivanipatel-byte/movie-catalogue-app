@@ -2,13 +2,13 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const Movie = require("./models/Movie");
 
-// Connect to MongoDB using the URI from .env correct rendering"
+// Connect to MongoDB using the URI from .env 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose.connection.on("error", (err) => console.error("❌ MongoDB connection error:", err));
 
 mongoose.connection.once("open", async () => {
-  console.log("✅ MongoDB Connected for Seeding"); 
+  console.log("✅ MongoDB Connected for Seeding data"); 
 
   const movies = [
     { name: "Inception", genre: "Sci-Fi", rating: 8.8, releaseDate: "2010-07-16", gist: "Dream within a dream thriller", director: "Christopher Nolan", cast: ["Leonardo DiCaprio","Joseph Gordon-Levitt","Elliot Page"], posterURL: "/images/inception.jpg" },
