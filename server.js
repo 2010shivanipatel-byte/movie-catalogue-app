@@ -32,7 +32,7 @@ app.get("/", async (req, res) => {
 });
 
 // Add movie form
-app.get("/addmovie", (req, res) => res.render("add"));
+app.get("/add", (req, res) => res.render("add"));
 
 // Create movie
 app.post("/add", async (req, res) => {
