@@ -7,7 +7,7 @@ const movieSchema = new mongoose.Schema({
   releaseDate: String,
   gist: String,
   director: String,
-  cast: [String],
+  crew: [String],
   posterURL: String
 });
 
