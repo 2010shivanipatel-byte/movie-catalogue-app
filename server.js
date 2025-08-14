@@ -42,7 +42,7 @@ app.post("/add", async (req, res) => {
   res.redirect("/");
 });
 
-// Edit movie form
+// Edit movie form and update functionality
 app.get("/edit/:id", async (req, res) => {
   const movie = await Movie.findById(req.params.id);
   res.render("edit", { movie });
