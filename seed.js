@@ -10,7 +10,7 @@ mongoose.connection.on("error", (err) => console.error("❌ MongoDB connection e
 mongoose.connection.once("open", async () => {
   console.log("✅ MongoDB Connected for Seeding"); 
 
-  const movies = [
+  const moviesnames = [
     { name: "Inception", genre: "Sci-Fi", rating: 8.8, releaseDate: "2010-07-16", gist: "Dream within a dream thriller", director: "Christopher Nolan", cast: ["Leonardo DiCaprio","Joseph Gordon-Levitt","Elliot Page"], posterURL: "/images/inception.jpg" },
     { name: "Interstellar", genre: "Sci-Fi", rating: 8.6, releaseDate: "2014-11-07", gist: "Space and time adventure", director: "Christopher Nolan", cast: ["Matthew McConaughey","Anne Hathaway","Jessica Chastain"], posterURL: "/images/interstellar.jpg" },
     { name: "Avatar", genre: "Sci-Fi", rating: 7.9, releaseDate: "2009-12-18", gist: "Blue aliens and humans", director: "James Cameron", cast: ["Sam Worthington","Zoe Saldana"], posterURL: "/images/avatar.jpg" },
