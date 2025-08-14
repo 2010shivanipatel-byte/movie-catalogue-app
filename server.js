@@ -31,7 +31,7 @@ app.get("/", async (req, res) => {
   res.render("index", { movies, q });
 });
 
-// Add movie form
+// Add movie form and route
 app.get("/add", (req, res) => res.render("add"));
 
 // Create movie
