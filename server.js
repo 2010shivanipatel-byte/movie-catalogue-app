@@ -56,7 +56,7 @@ app.put("/edit/:id", async (req, res) => {
   res.redirect("/");
 });
 
-// Delete movie
+// Delete movie or remove functionality
 app.delete("/delete/:id", async (req, res) => {
   await Movie.findByIdAndDelete(req.params.id);
   res.redirect("/");
