@@ -62,6 +62,6 @@ app.delete("/delete/:id", async (req, res) => {
   res.redirect("/");
 });
 
-// Start server
+// Start server-Final tweaks and bug fixes
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
