@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // Routes
 
-// Home - list movies
+// Home - list movies or search functionality
 app.get("/", async (req, res) => {
   const q = req.query.q?.trim();
   const filter = q ? { name: { $regex: q, $options: "i" } } : {};
